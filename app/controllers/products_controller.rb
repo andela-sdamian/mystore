@@ -1,10 +1,16 @@
 class ProductsController < ApplicationController 
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  def index 
-    @products = Product.search(params[:search], params[:page]) 
 
-    #@products = Product.order(params[:name]) if params[:name]
-    #@products = Product.order(params[:price]) if params[:price]
+  def homepage 
+    
+  end 
+
+  def index 
+    if params[:sort]
+      @products = Product.sort(params[:sort], params[:direction], params[:page])
+    else 
+     @products = Product.search(params[:search], params[:page]) 
+    end  
   end 
 
   def show 

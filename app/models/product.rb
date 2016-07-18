@@ -15,4 +15,8 @@ class Product < ActiveRecord::Base
       products
     end 
   end 
+
+  def self.sort(column, direction, page)
+    order("#{column} #{direction}").paginate(page: page)
+  end 
 end 
