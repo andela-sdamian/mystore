@@ -8,12 +8,14 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'will_paginate'
 
 group :development, :test do
   gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
 end
 
 group :development do
