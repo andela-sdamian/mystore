@@ -5,12 +5,65 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+  <style>
+    .input-mysize { width: 250px }
+    .btn-product{
+  width: 100%;
+}
+  </style>
+
+<!-- Product css -->
+  <style>
+    
+    h4{
+      font-weight: 600;
+  }
+  p{
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  .price{
+    font-size: 30px;
+      margin: 0 auto;
+      color: #333;
+  }
+  .right{
+    float:right;
+    border-bottom: 2px solid #4B8E4B;
+  }
+  .thumbnail{
+    opacity:0.70;
+    -webkit-transition: all 0.5s; 
+    transition: all 0.5s;
+  }
+  .thumbnail:hover{
+    opacity:1.00;
+    box-shadow: 0px 0px 10px #4bc6ff;
+  }
+  .line{
+    margin-bottom: 5px;
+  }
+  @media screen and (max-width: 770px) {
+    .right{
+      float:left;
+      width: 100%;
+    }
+  }
+
+
+  </style>
 </head>
+
+
 <body>
 
-<%= content_tag :h1, "Sabo Market", id: "app-title" %> 
 
-<%= yield %>
+<%= render 'layouts/top_nav_bar' %>
+
+<div class="container">
+  <%= yield %>
+</div>
 
 </body>
 </html>

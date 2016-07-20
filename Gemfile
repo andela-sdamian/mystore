@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'will_paginate'
+gem 'bootstrap-sass'
+
 
 group :development, :test do
   gem 'pry-rails'

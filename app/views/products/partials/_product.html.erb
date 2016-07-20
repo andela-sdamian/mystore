@@ -1,20 +1,17 @@
-<div class="container">
-    <div class="row">
-      <div class="col-md-12">
-      <div class="col-sm-6 col-md-4">
+<div class="col-sm-6 col-md-4">
         <div class="thumbnail" >
-          <h4 class="text-center"><span class="label label-info"><%= @product.category.name%></span></h4>
-          <img src="<%= @product.image_url %>" class="img-responsive"/><div class="caption">
+          <h4 class="text-center"><span class="label label-info"><%= product.category.name%></span></h4>
+          <img src="<%= product.image_url %>" class="img-responsive"/><div class="caption">
             <div class="row">
               <div class="col-md-6 col-xs-6">
-                <h3><%= @product.name %></h3>
+                <h3><%= product.name %></h3>
               </div>
               <div class="col-md-6 col-xs-6 price">
                 <h3>
-                <label>$<%= @product.price %></label></h3>
+                <label>$<%= product.price %></label></h3>
               </div>
             </div>
-            <p><%= @product.description || "No description yet"%></p>
+            <p><%= product.description || "No description yet"%></p>
             <div class="row">
               <div class="col-md-6">
                 <a class="btn btn-primary btn-product"><span class="glyphicon glyphicon-thumbs-up"></span> Like</a> 
@@ -27,10 +24,3 @@
           </div>
         </div>
     </div>
-
-
-        
-      </div>
-  </div>
-
-</div>

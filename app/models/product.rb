@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
   belongs_to :category 
 
-  self.per_page = 2
+  self.per_page = 3
 
   def self.search(keyword, page)
     products = all.paginate(page: page)

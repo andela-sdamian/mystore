@@ -1,8 +1,8 @@
 class ProductsController < ApplicationController 
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
-  def homepage 
-    
+  def listing
+    @listings = Product.all 
   end 
 
   def index 
@@ -55,6 +55,6 @@ class ProductsController < ApplicationController
 
   def product_params 
     params.require(:product).permit(:name, :price, :category_id, 
-      :search, :page, :image_url)
+      :search, :page, :image_url, :description)
   end 
 end 
